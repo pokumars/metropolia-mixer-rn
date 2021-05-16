@@ -5,9 +5,6 @@ import { Ionicons, Fontisto } from '@expo/vector-icons';
 import Colors from "../constants/Colors";
 import { Platform } from "react-native";
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import DrinksStackNavigator from "./DrinksStackNavigator";
-import FavoritesStackNavigator from "./FavoritesStackNavigator";
-import ProfileStackNavigator from "./ProfileStackNavigator";
 import { useDispatch, useSelector } from "react-redux";
 import { passInitialFavouritesToState } from "../state-mgmt/actions/drinksActions";
 import { createStackNavigator } from '@react-navigation/stack';
@@ -15,6 +12,7 @@ import DrinkRecipeScreen from "../screens/DrinkRecipeScreen";
 import AllDrinksScreen from "../screens/AllDrinksScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import { getHeaderTitle } from "../helpers/helperFunctions";
 
 const Stack = createStackNavigator();
 
@@ -77,7 +75,11 @@ const MainNavigator = () => {
           headerTitleStyle: {},
         }}
       >
-        <Stack.Screen name='Drinks' component={TabNavigator} />
+        <Stack.Screen name='Drinks' component={TabNavigator} 
+        options={({ route }) => ({
+          headerTitle: getHeaderTitle(route),
+        })}
+        />
         <Stack.Screen name='DrinkRecipe' component={DrinkRecipeScreen}
           options={({ route }) => ({ title: route.params.drinkName })} />
       </Stack.Navigator>
@@ -85,7 +87,10 @@ const MainNavigator = () => {
   )
 }
 
-const TabNavigator = () => {
+const TabNavigator = ({ navigation, route }) => {
+
+
+
   const dispatch = useDispatch();
   const user = useSelector(state => state.user.user); 
   //console.log(user)
@@ -107,7 +112,7 @@ const TabNavigator = () => {
              activeBackgroundColor= {Colors.navyBlue}
              >
       <Tab.Screen
-          name="DrinksStackNavigator"
+          name="Drinks"
           component={AllDrinksScreen} 
           options= {{
               tabBarLabel:'Drinks',
