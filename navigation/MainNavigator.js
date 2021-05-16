@@ -10,7 +10,13 @@ import FavoritesStackNavigator from "./FavoritesStackNavigator";
 import ProfileStackNavigator from "./ProfileStackNavigator";
 import { useDispatch, useSelector } from "react-redux";
 import { passInitialFavouritesToState } from "../state-mgmt/actions/drinksActions";
+import { createStackNavigator } from '@react-navigation/stack';
+import DrinkRecipeScreen from "../screens/DrinkRecipeScreen";
+import AllDrinksScreen from "../screens/AllDrinksScreen";
+import FavoritesScreen from "../screens/FavoritesScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 
+const Stack = createStackNavigator();
 
 
 const Tab = Platform.OS=="android"? createMaterialBottomTabNavigator(): createBottomTabNavigator();
@@ -62,6 +68,37 @@ const MainNavigator = () => {
   
   return (
     <NavigationContainer>
+      <Stack.Navigator initialRouteName='Drinks'
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: Colors.primaryGreen,
+          },
+          headerTintColor: Colors.navyBlue,
+          headerTitleStyle: {},
+        }}
+      >
+        <Stack.Screen name='Drinks' component={TabNavigator} />
+        <Stack.Screen name='DrinkRecipe' component={DrinkRecipeScreen}
+          options={({ route }) => ({ title: route.params.drinkName })} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
+
+const TabNavigator = () => {
+  const dispatch = useDispatch();
+  const user = useSelector(state => state.user.user); 
+  //console.log(user)
+  
+  useEffect(() => {
+    const addUserFavoritesToState = () => {
+      //console.log('user.favourites', user.favourites);
+      dispatch(passInitialFavouritesToState(user.favourites))
+    }
+    addUserFavoritesToState();
+  }, [])
+  
+  return (
       <AdaptiveTabNavigator
            initialRouteName="Drinks"
              activeTintColor= 'white'
@@ -71,29 +108,29 @@ const MainNavigator = () => {
              >
       <Tab.Screen
           name="DrinksStackNavigator"
-          component={DrinksStackNavigator} 
+          component={AllDrinksScreen} 
           options= {{
               tabBarLabel:'Drinks',
               tabBarIcon: ({focused}) => (<Fontisto  name="cocktail" size={20} color={ focused=== true ? 'white': Colors.navyBlue}/> )
             }}
         />
-        <Tab.Screen name="Favorites" component={FavoritesStackNavigator}
+        <Tab.Screen name="Favorites" component={FavoritesScreen}
           options= {{
             tabBarLabel:'Favorites',
             tabBarIcon: ({focused}) => (<Fontisto  name="heart" size={20} color={ focused=== true ? 'white': Colors.navyBlue}/> )
           }} 
         />
         <Tab.Screen 
-          name="Profile" component={ProfileStackNavigator}
+          name="Profile" component={ProfileScreen}
           options= {{
             tabBarLabel:'Profile',
             tabBarIcon: ({focused}) => (<Ionicons  name="person" size={25} color={ focused=== true ? 'white': Colors.navyBlue}/> )
           }}
         />
       </AdaptiveTabNavigator>
-    </NavigationContainer>
   )
 }
+
 
 
 
