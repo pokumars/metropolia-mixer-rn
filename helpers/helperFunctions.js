@@ -2,7 +2,8 @@ import * as SecureStore from 'expo-secure-store';
 import { FIND_BY_ALCOHOL, FIND_BY_NAME, FIND_BY_METHOD } from "../constants/constants";
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
-
+//this puts the correct title when navigatring the tabs. It is necessary after we changed the app to not show some tabs on specific screens
+// more here https://reactnavigation.org/docs/screen-options-resolution our reason was reason number 2 (17May2021)
 export function getHeaderTitle(route) {
   // If the focused route is not found, we need to assume it's the initial screen
   // This can happen during if there hasn't been any navigation inside the screen
@@ -18,7 +19,6 @@ export function getHeaderTitle(route) {
       return 'Profile';
   }
 }
-
 
 export const saveToSecureStore = async (key, value)  =>{
   await SecureStore.setItemAsync(key, value);
