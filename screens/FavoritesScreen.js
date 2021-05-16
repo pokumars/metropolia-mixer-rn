@@ -38,7 +38,6 @@ const FavoritesScreen = (props) => {
               </TitleText>)
             : (
               <FlatList
-                ListHeaderComponent={<TitleText size='h3' >{favouriteDrinkIds.length} favourites</TitleText>}
                 numColumns={Math.floor(window.width / (drinkItemWidth + drinkItemMargin))}
                 data={favouriteDrinks}
                 renderItem={renderDrinkItem}

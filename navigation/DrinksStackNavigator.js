@@ -4,7 +4,6 @@ import Colors from '../constants/Colors';
 import AllDrinksScreen from "../screens/AllDrinksScreen";
 import DrinkRecipeScreen from "../screens/DrinkRecipeScreen";
 
-
 const Stack = createStackNavigator();
 
 const DrinksStackNavigator = () => {

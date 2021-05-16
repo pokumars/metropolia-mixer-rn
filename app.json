@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mixer-logic-rn",
-    "slug": "mixer-logic-rn",
+    "name": "rn-thesis-app",
+    "slug": "rn-thesis-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
