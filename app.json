@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rn-thesis-app",
-    "slug": "rn-thesis-app",
+    "name": "Metropolia Mixer",
+    "slug": "metropolia-mixer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
