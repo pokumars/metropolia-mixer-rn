@@ -4,7 +4,7 @@ import { WebView } from 'react-native-webview';
 
 const WebViewScreen = () => {
   return (
-    <WebView source={{ uri: 'https://mixerlogic.herokuapp.com' }} style={{}} />
+    <WebView source={{ uri: 'https://metropolia-mixer.herokuapp.com' }} style={{}} />
   )
 }
 
