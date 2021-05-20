@@ -3,18 +3,18 @@
 CONTENTS OF THIS FILE
 ---------------------
 
- * Introduction
- * Screenshots
- * How to use?
- * Packages/frameworks used
- * Features
- * Download APK
+ * <a href="#introduction">Introduction</a>
+ * <a href="#screenshots">Screenshots</a>
+ * <a href="#how-to-use">How to use?</a>
+ * <a href="#packages-frameworks">Packages/frameworks used</a>
+ * <a href="#features">Features</a>
+ * <a href="#download-apk">Download APK</a>
 
-## Introduction
+<h2 id="introduction">Introduction</h2>
 This is one of 2 apps that will be part of a performance analysis for a paper
 one made with react native and one native android (Kotlin) application.
 
-## Screenshots
+<h2 id="screenshots"> Screenshots </h2>
 
 | Search for drink  | Favourites demonstration |
 |------------|-------------| 
@@ -33,7 +33,7 @@ one made with react native and one native android (Kotlin) application.
 | ![webview](https://user-images.githubusercontent.com/33485810/118988726-1f7f6480-b98a-11eb-946a-4471e66819fc.gif) |
 
 
-## How to use?
+<h2 id="how-to-use"> How To Use </h2>
 To use the app, use one of these 3 credentials
 
 user-1: {
@@ -53,16 +53,15 @@ passcode: "p4ssw0rd3"
 
 
 
-## Packages/frameworks used
+<h2 id="packages-frameworks"> Packages/frameworks used </h2>
 * [React](https://reactjs.org/)
 more to come
 
-
-## Features
+<h2 id="features"> Features </h2>
+## 
 Todo
 
-## Download APK
-
+<h2 id="download-apk"> Download APK</h2>
 TODO: link to download apk
 
 ### Note
