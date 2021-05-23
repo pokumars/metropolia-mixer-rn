@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Dimensions, SafeAreaView, StyleSheet, View, FlatList, TextInput } from 'react-native'
 import { useSelector } from 'react-redux'
 import CustomStatusBar from '../components/CustomStatusBar'
 import CustomText from '../components/CustomText'
 import DrinkItem from '../components/DrinkItem'
 import Colors from '../constants/Colors'
-import { drinkItemMargin, drinkItemWidth, FIND_BY_ALCOHOL, FIND_BY_METHOD, FIND_BY_NAME } from '../constants/constants'
+import { drinkItemMargin, drinkItemWidth, FIND_BY_NAME } from '../constants/constants'
 import { deepSearch } from '../helpers/helperFunctions'
 
 const window = Dimensions.get("window");
@@ -18,6 +18,10 @@ const AllDrinksScreen = (props) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([...drinks]);
   const [searchCriteria, setSearchCriteria] = useState(FIND_BY_NAME);
+
+  useEffect(() => {
+    setSearchResults([...drinks])
+  }, [drinks])
 
   console.log('faves.length', faves.length);
 

@@ -32,6 +32,16 @@ const StartupScreen = (props) => {
   const drinks = useSelector(state => state.drinks.allDrinks.length)
   console.log('drinks', drinks);
   const dispatch = useDispatch();
+ 
+  const loadAllDrinks = async ()=> {
+    //As soon as app starts, load all the drinks into the store
+    dispatch(getAllDrinksToStore())
+  }
+
+  useEffect(() => {
+    
+    loadAllDrinks();
+  }, [])
 
   useEffect(() => {
     const tryLogin = async () => {
@@ -46,16 +56,6 @@ const StartupScreen = (props) => {
       dispatch(getUserFromBackendBasedOnToken(token));
     }
     tryLogin();
-  }, [])
-  
-  const loadAllDrinks = async ()=> {
-    //As soon as app starts, load all the drinks into the store
-    dispatch(getAllDrinksToStore())
-  }
-
-  useEffect(() => {
-    
-    loadAllDrinks();
   }, [])
 
   const renderEntranceButtons = () => {

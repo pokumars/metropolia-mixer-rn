@@ -62,7 +62,7 @@ more to come
 Todo
 
 <h2 id="download-apk"> Download APK</h2>
-TODO: link to download apk
+follow this <a href="">(TODO add link)link </a> and then click on the download button
 
 ### Note
 - the server goes into sleep mode when it hasnt been used for a while so the first request may take
