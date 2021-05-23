@@ -24,8 +24,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#5CDB95"
       },
-      "package": "com.example.metropoliamixer",
-      "enableDangerousExperimentalLeanBuilds" : true
+      "package": "com.example.metropoliamixer"
     },
     "web": {
       "favicon": "./assets/favicon.png"
