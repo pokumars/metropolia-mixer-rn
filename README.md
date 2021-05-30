@@ -18,19 +18,19 @@ one made with react native and one native android (Kotlin) application.
 
 | Search for drink  | Favourites demonstration |
 |------------|-------------| 
-| ![search](https://user-images.githubusercontent.com/33485810/118988626-08d90d80-b98a-11eb-8258-5b421c81f070.gif) | ![favourites_after_liking](https://user-images.githubusercontent.com/33485810/118988411-d6c7ab80-b989-11eb-87f1-46ea81e82c6d.gif) |
+| ![search](https://user-images.githubusercontent.com/33485810/120123679-e54b6980-c1b8-11eb-89b1-953eacad536e.gif) | ![favourites_after_liking](https://user-images.githubusercontent.com/33485810/120123480-c698a300-c1b7-11eb-92fb-d316bbd1f8ad.gif) |
 
 | Like/Unlike   | Auto-login(User logged in before) |
 |------------|-------------| 
-| ![like_unlike](https://user-images.githubusercontent.com/33485810/118988464-e21ad700-b989-11eb-9b09-bee1c0ee757f.gif) | ![auto_login](https://user-images.githubusercontent.com/33485810/118988318-c283ae80-b989-11eb-94fd-a536044d363a.gif) |
+| ![like_unlike](https://user-images.githubusercontent.com/33485810/120123498-d912dc80-c1b7-11eb-9dfc-9a0c26e5bb9a.gif) | ![auto_login](https://user-images.githubusercontent.com/33485810/120123465-b4b70000-c1b7-11eb-9430-fcb685d684c1.gif) |
 
 | Login   | Logout |
 |------------|-------------| 
-| ![login_fail_once](https://user-images.githubusercontent.com/33485810/118988522-ee9f2f80-b989-11eb-8e83-c5d452470da4.gif) | ![logout](https://user-images.githubusercontent.com/33485810/118988574-fd85e200-b989-11eb-89b9-aec647c52ba9.gif) |
+| ![login_fail_once](https://user-images.githubusercontent.com/33485810/120123513-e92abc00-c1b7-11eb-9695-63180def2a18.gif) | ![logout](https://user-images.githubusercontent.com/33485810/120123526-f778d800-c1b7-11eb-913c-f8f649acccb0.gif) |
 
 | Webview |
 |-------------|
-| ![webview](https://user-images.githubusercontent.com/33485810/118988726-1f7f6480-b98a-11eb-946a-4471e66819fc.gif) |
+| ![webview](https://user-images.githubusercontent.com/33485810/120123544-18412d80-c1b8-11eb-8298-7910f7d153d9.gif) |
 
 
 <h2 id="how-to-use"> How To Use </h2>
