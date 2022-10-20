@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Button, SafeAreaView, StyleSheet, View, FlatList, Dimensions } from 'react-native'
+import { SafeAreaView, StyleSheet, View, FlatList, Dimensions } from 'react-native'
 import CustomStatusBar from '../components/CustomStatusBar'
 import { useSelector } from 'react-redux'
 import DrinkItem from '../components/DrinkItem'

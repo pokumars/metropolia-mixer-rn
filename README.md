@@ -63,6 +63,7 @@ Todo
 
 <h2 id="download-apk"> Download APK</h2>
 Download apk<a href="https://metropolia-mixer.s3.eu-central-1.amazonaws.com/metropolia-mixer-expo-signed.apk">here </a> 
+pre oct 2020 end point was heroku. After Oct 2022 endpoint is fly.io.
 
 NB: it is 52Mb because of expo.
 

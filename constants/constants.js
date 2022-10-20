@@ -1,5 +1,6 @@
 //TODO: when not in dev mode, remember to uncomment this and comment out the heroku one
-export const baseUrl = 'https://metropolia-mixer.herokuapp.com'
+//'https://metropolia-mixer.herokuapp.com'
+export const baseUrl = 'https://metropolia-mixer-backend.fly.dev'
 export const tokenKeyInSecureStore = 'token'
 export const drinkItemWidth = 150;
 export const drinkItemMargin = 10;
